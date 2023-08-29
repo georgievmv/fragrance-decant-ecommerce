@@ -1,0 +1,18 @@
+.container {
+  text-align: center;
+  overflow: visible;
+}
+
+.productsGrid {
+  overflow: visible;
+  padding: 1rem;
+  display: grid;
+  gap: 1.5%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media (max-width: 850px) {
+  .productsGrid {
+    grid-template-columns: 49% 49%;
+  }
+}

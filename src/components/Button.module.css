@@ -1,0 +1,78 @@
+.btn {
+  overflow: visible;
+  max-width: 400px;
+  padding: 10px 12px;
+  border-radius: 15px;
+  font-size: 20px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  color: black;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s;
+}
+.btn::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 19px;
+  border-color: inherit;
+  border-width: 2px;
+  border-style: solid;
+  top: -10px;
+  right: -20px;
+  opacity: 0.7;
+  z-index: -1;
+  box-sizing: border-box;
+  animation: hoverOut 0.5s ease forwards;
+}
+
+.btn:hover::after {
+  animation: hoverIn 0.3s forwards;
+}
+
+@keyframes hoverOut {
+  0% {
+    top: 0;
+    right: 0;
+    border-width: 3px;
+    opacity: 1;
+  }
+  100% {
+    top: -10px;
+    right: -20px;
+    border-width: 2px;
+    opacity: 0.7;
+  }
+}
+@keyframes hoverIn {
+  0% {
+    top: -10px;
+    right: -20px;
+    border-width: 2px;
+    opacity: 0.7;
+  }
+  100% {
+    top: 0;
+    right: 0;
+    border-width: 3px;
+    opacity: 1;
+  }
+}
+/* .btn:hover {
+  transform: scale(1.1, 1.1);
+} */
+
+.button {
+  border-radius: 15px;
+  padding: 10px 16px;
+  background-color: #f02d34;
+  color: white;
+  border: none;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}

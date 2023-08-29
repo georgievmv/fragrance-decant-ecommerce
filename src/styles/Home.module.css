@@ -1,0 +1,26 @@
+.cartIcon {
+  height: 2rem;
+  position: fixed;
+  right: 0px;
+  z-index: 999;
+  margin: 2rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.cartIcon:hover {
+  scale: 150%;
+}
+.addItemInCart {
+  animation: addItemInCart 0.3s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes addItemInCart {
+  0% {
+    scale: 100%;
+    color: black;
+  }
+  100% {
+    scale: 200%;
+    color: #f02d34;
+  }
+}

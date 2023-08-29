@@ -1,0 +1,117 @@
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding-bottom: 1rem;
+  width: 100%;
+  cursor: pointer;
+}
+.productText {
+  display: flex;
+  flex-direction: column;
+  height: 10rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.productContainer:hover > .heading {
+  text-decoration: underline;
+}
+.image {
+  height: 15rem;
+  width: 100%;
+  object-fit: contain;
+}
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cartButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  background-color: white;
+  text-transform: uppercase;
+}
+.cartButton:hover {
+  background-color: #4f4f4f;
+  color: white;
+}
+.cartButton:active {
+  background-color: black;
+  color: white;
+}
+.cartButton:hover > .cartIcon {
+  animation: slideInCart 0.2s ease forwards;
+}
+.cartIcon {
+  height: 15px;
+  margin-left: -30px;
+  margin-right: 12px;
+  opacity: 0;
+  animation: slideOutCart 0.2s ease forwards;
+}
+@keyframes slideOutCart {
+  0% {
+    margin-left: 0px;
+    margin-right: 10px;
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    margin-left: -30px;
+    margin-right: 12px;
+    opacity: 0;
+  }
+}
+@keyframes slideInCart {
+  0% {
+    margin-left: -30px;
+    margin-right: 12px;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0px;
+    margin-right: 10px;
+    opacity: 1;
+  }
+}
+
+.radio {
+  background: #eef0f4;
+  border: 1px solid grey;
+  border-radius: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  appearance: none;
+  width: 3rem;
+  height: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.radio:hover {
+  text-decoration: underline;
+}
+.ten::after {
+  content: '10ml';
+}
+.five::after {
+  content: '5ml';
+}
+.radio:checked {
+  border: 1.5px solid black;
+  opacity: 1;
+}
