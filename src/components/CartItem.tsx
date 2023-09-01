@@ -42,7 +42,11 @@ const CartItem: React.FC<{ products: CartProduct[] }> = ({ products }) => {
       {products.map((product) => {
         return (
           <div key={product.id} className={styles.cartItem}>
-            <img className={styles.cartImage} src={product.image} alt="" />
+            <img
+              className={styles.cartImage}
+              src={`/fragrance-decant-ecommerce${product.image}`}
+              alt=""
+            />
             <div className={styles.description}>
               <h3>
                 {`${product.name} 
