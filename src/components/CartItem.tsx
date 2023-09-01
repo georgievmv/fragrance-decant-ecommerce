@@ -45,7 +45,8 @@ const CartItem: React.FC<{ products: CartProduct[] }> = ({ products }) => {
             <img
               className={styles.cartImage}
               src={`/fragrance-decant-ecommerce${product.image}`}
-              alt=""
+              /*               src={`${product.image}`}
+               */ alt=""
             />
             <div className={styles.description}>
               <h3>

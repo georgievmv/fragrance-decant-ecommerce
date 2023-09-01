@@ -45,7 +45,11 @@ const SingleProducts: React.FC<{ product: Product }> = ({ product }) => {
   };
   return (
     <div className={styles.productContainer}>
-      <img className={styles.image} src={`/fragrance-decant-ecommerce${product.image}`} alt="" />
+      <img
+        className={styles.image}
+        src={`/fragrance-decant-ecommerce${product.image}`} /* src={product.image} */
+        alt=""
+      />
       <div className={styles.productText}>
         <h3 className={styles.heading}>{product.name}</h3>
         {ml === '10' ? <p>{product.price10ml}лв.</p> : <p>{product.price5ml}лв.</p>}

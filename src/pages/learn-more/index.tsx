@@ -4,7 +4,8 @@ import styles from './index.module.css';
 const index = () => {
   return (
     <>
-      <main className={styles.container}>
+      <p>fancy placeholder</p>
+      {/*   <main className={styles.container}>
         <div className={styles.imageContainer}></div>
         <div className={styles.textContainer}>
           <h1>About us</h1>
@@ -21,7 +22,7 @@ const index = () => {
             ut.
           </p>
         </div>
-      </main>
+      </main> */}
     </>
   );
 };
