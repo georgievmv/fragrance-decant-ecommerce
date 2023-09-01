@@ -5,10 +5,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretLeft } from '@fortawesome/free-solid-svg-icons';
 import CartItem from './CartItem';
 import { Context } from '@/store/app-context';
+import Button from './Button';
 
 const Cart: React.FC<{ setIsCartOpen: (arg: boolean) => void }> = ({ setIsCartOpen }) => {
   const [isBackdropOpen, setIsBackdropOpen] = useState(true);
   const { cartProducts } = useContext(Context);
+
+  let totalPrice = 0;
+  cartProducts.forEach((product) => {
+    totalPrice += product.price * product.qty;
+  });
+
   const onCartCloseClickHandler = () => {
     const cart = document.getElementById('cart-container');
     if (cart) {
@@ -24,6 +31,7 @@ const Cart: React.FC<{ setIsCartOpen: (arg: boolean) => void }> = ({ setIsCartOp
     onCartCloseClickHandler();
   };
 
+  const checkoutClickHandler = () => {};
   const arrow = (
     <FontAwesomeIcon
       className={styles.cartArrow}
@@ -32,7 +40,7 @@ const Cart: React.FC<{ setIsCartOpen: (arg: boolean) => void }> = ({ setIsCartOp
     />
   );
   return (
-    <div>
+    <>
       {isBackdropOpen && <div onClick={onBackdropClickHandler} className={styles.backdrop}></div>}
       <div id="cart-container" className={styles.container}>
         <header className={styles.header}>
@@ -42,9 +50,23 @@ const Cart: React.FC<{ setIsCartOpen: (arg: boolean) => void }> = ({ setIsCartOp
         </header>
         <main>
           <CartItem products={cartProducts} />
+          <div className={styles.checkoutContainer}>
+            <div className={styles.checkout}>
+              <p>Total:</p>
+              <p>{totalPrice}лв.</p>
+            </div>
+            <Button
+              backgroundColor="#1787e0"
+              id="checkout-button"
+              color="red"
+              onClick={checkoutClickHandler}
+            >
+              Checkout
+            </Button>
+          </div>
         </main>
       </div>
-    </div>
+    </>
   );
 };
 

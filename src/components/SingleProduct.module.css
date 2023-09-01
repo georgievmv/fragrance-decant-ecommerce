@@ -14,7 +14,8 @@
   justify-content: space-between;
   align-items: center;
 }
-.productContainer:hover > .heading {
+
+.productContainer:hover .heading {
   text-decoration: underline;
 }
 .image {
@@ -114,4 +115,12 @@
 .radio:checked {
   border: 1.5px solid black;
   opacity: 1;
+}
+@media (max-width: 450px) {
+  .productContainer:hover .heading {
+    text-decoration: none;
+  }
+  .productText {
+    font-size: 0.9rem;
+  }
 }

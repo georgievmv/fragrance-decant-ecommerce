@@ -3,6 +3,7 @@
   height: 35rem;
   position: relative;
   background-image: url(../../public/glass-1116067_1920.jpg);
+
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -23,8 +24,6 @@
   margin: 0rem;
   padding: 2rem;
   mix-blend-mode: difference;
-  /*   text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
- */
 }
 .textContainer {
   display: flex;

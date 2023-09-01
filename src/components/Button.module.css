@@ -6,6 +6,7 @@
   font-size: 20px;
   margin-top: 40px;
   text-transform: uppercase;
+
   color: black;
   border: none;
   cursor: pointer;
@@ -64,15 +65,3 @@
 /* .btn:hover {
   transform: scale(1.1, 1.1);
 } */
-
-.button {
-  border-radius: 15px;
-  padding: 10px 16px;
-  background-color: #f02d34;
-  color: white;
-  border: none;
-  margin-top: 40px;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-}

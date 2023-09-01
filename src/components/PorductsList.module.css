@@ -1,6 +1,7 @@
 .container {
   text-align: center;
   overflow: visible;
+  margin-top: 1rem;
 }
 
 .productsGrid {

@@ -4,3 +4,11 @@ export type Product = {
   price5ml: number;
   image: string;
 };
+export type CartProduct = {
+  id: string;
+  name: string;
+  price: number;
+  ml: number;
+  image: string;
+  qty: number;
+};

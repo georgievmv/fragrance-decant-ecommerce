@@ -39,10 +39,10 @@ export default function Home() {
     if (!!cartProducts.length) {
       const cart = document.getElementById('cart-id');
       if (cart) {
+        cart.classList.remove(styles.addItemInCart);
         setTimeout(() => {
           cart.classList.add(styles.addItemInCart);
-        }, 300);
-        cart.classList.remove(styles.addItemInCart);
+        }, 1);
       }
     }
   }, [cartProducts]);

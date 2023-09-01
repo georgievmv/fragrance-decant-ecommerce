@@ -2,11 +2,12 @@ import React from 'react';
 import styles from './Button.module.css';
 const Button: React.FC<{
   children: string;
+  backgroundColor?: string;
   onClick: () => void;
   color?: 'blue' | 'red';
   width?: string;
   id: string;
-}> = ({ children, width = '100%', color = 'blue', onClick, id }) => {
+}> = ({ children, backgroundColor = '#ffffff', width = '100%', color = 'blue', onClick, id }) => {
   let hex = '';
   color === 'red' ? (hex = '#f02d34') : (hex = '#1787e0');
 
@@ -20,14 +21,14 @@ const Button: React.FC<{
     const button = document.getElementById(e.currentTarget.id);
     console.log(button);
     if (button) {
-      button.style.backgroundColor = '#ffffff';
+      button.style.backgroundColor = backgroundColor;
     }
   };
   const onMouseDownHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const button = document.getElementById(e.currentTarget.id);
     console.log(button);
     if (button) {
-      button.style.backgroundColor = '#ffffff';
+      button.style.backgroundColor = backgroundColor;
     }
   };
   const onMouseUpHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -45,7 +46,7 @@ const Button: React.FC<{
       onMouseLeave={onMouseLeaveHandler}
       onMouseEnter={onMouseEnterHandler}
       id={id}
-      style={{ borderColor: hex, width }}
+      style={{ borderColor: hex, width, backgroundColor }}
       onClick={onClick}
       className={styles.btn}
     >

@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem;
+  height: 70vh;
+  box-sizing: content-box;
+  background-color: white;
+}
+
+.imageContainer {
+  background-image: url(../../../public/A\ fragrance\ bot\ 0.png);
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+}
+
+.textContainer {
+  position: relative;
+  width: 40%;
+  overflow: visible;
+}
+
+.textContainer h1 {
+  position: absolute;
+  left: -15rem;
+  font-size: 5rem;
+  color: white;
+  mix-blend-mode: difference;
+  z-index: 999;
+}
+
+.textContainer p {
+  margin-top: 7rem;
+}
