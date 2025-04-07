@@ -47,7 +47,7 @@ const SingleProducts: React.FC<{ product: Product }> = ({ product }) => {
     <div className={styles.productContainer}>
       <img
         className={styles.image}
-        src={`/fragrance-decant-ecommerce${product.image}`} /* src={product.image} */
+        /* src={`/fragrance-decant-ecommerce${product.image}`} */ src={product.image}
         alt=""
       />
       <div className={styles.productText}>

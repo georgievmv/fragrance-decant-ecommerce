@@ -19,21 +19,18 @@ const Button: React.FC<{
   };
   const onMouseLeaveHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const button = document.getElementById(e.currentTarget.id);
-    console.log(button);
     if (button) {
       button.style.backgroundColor = backgroundColor;
     }
   };
   const onMouseDownHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const button = document.getElementById(e.currentTarget.id);
-    console.log(button);
     if (button) {
       button.style.backgroundColor = backgroundColor;
     }
   };
   const onMouseUpHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const button = document.getElementById(e.currentTarget.id);
-    console.log(button);
     if (button) {
       button.style.backgroundColor = hex;
     }
